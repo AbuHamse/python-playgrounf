@@ -19,3 +19,23 @@ elif operation == '*':
     print(f"The result is: {results}")
 else:
     print(f"Please enter a vaild operator {operation}")
+
+
+
+
+# Exercise 2 Below
+
+weight = float(input('Please enter your weight below: '))
+unit = input('Please enter the unit of weight Kilograms or Pounds (K or P): ').strip().upper()
+
+if unit == 'K':
+    weight *= 2.05
+    unit = 'Pounds'
+elif unit == 'P':
+    weight /= 2.05
+    unit = 'Kilograms'
+else:
+    print("Please enter a correct unit.")
+    exit()  # Exit the program if the input is invalid
+
+print(f"You are {round(weight, 1)} {unit}")
